@@ -1,6 +1,7 @@
+
 ---
 - name: 1. Install MariaDB server package
-  apt: name=mariadb-server state=present
+  apt: name=mariadb-server-10.1  state=present
 
 - name: 2. Start Mysql Service
   service: name=mysql state=started enabled=true
@@ -28,3 +29,5 @@
 
 - name: 7. install Hello World PHP script with database
   copy: src=db.php dest=/var/www/html/db.php mode=0664
+
+
